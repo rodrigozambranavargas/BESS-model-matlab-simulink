@@ -32,8 +32,8 @@ smax = 0.33;                % Maximun slip 0.25
 Fs = 1.8%1.8;               % Stator Flux
 Vbus_ref = 1200;            % Bus Voltage
 %Mechanic 
-J = 90%130;                    % Inertia Kg*m^2
-D = 0.1%1e-3;                   % Damping friction factor N.m.s
+J = 90%130;                 % Inertia Kg*m^2
+D = 0.1%1e-3;               % Damping friction factor N.m.s
 %PI regulators
 sigma = 1- Lm^2/(Ls*Lr); 
 tau_i = (sigma*Lr)/Rr;
@@ -97,7 +97,7 @@ for k=1:7
     %plot(lambda,Cp), grid on, hold on,
     
     %Rotor Speed Vs Power Graph
-    for Vv = 6:0.5:12   %Wind Velocity at 12 m/s
+    for Vv = 6:0.5:12      %Wind Velocity at 12 m/s
         cont2=1;
         for serie = 0.1:0.1:14
             Pt (cont2)= (0.5*ro*pi*(Radio)^2)*(Vv)^3*Cp(cont2);
@@ -125,14 +125,14 @@ end
 Vv=[0.1:0.1:15];
 %figure (3)
 %plot(Vv,Pt), grid on, hold on,
-%---------------------------------------------------------------------
+%--------------------------------------------------------------------------
 
 %--------------------------------------------------------------------------
 %PARAMETERS OF BESS
 %--------------------------------------------------------------------------
 %Space for Grid Side Converter
-Cbus_bess = 15e-3;%80e-3;               % DC bus capacitance
-Rg_bess = 20e-5;%20e-6;                 % Grid side filter? resistance 1
+Cbus_bess = 15e-3;%80e-3;        % DC bus capacitance
+Rg_bess = 20e-5;%20e-6;          % Grid side filter? resistance 1
 Lg_bess = 600e-6;%483e-6;        % Grid side filter? inductance 1e-3
 
 %kp_v = -1000;   
