@@ -131,9 +131,12 @@ Vv=[0.1:0.1:15];
 %PARAMETERS OF BESS
 %--------------------------------------------------------------------------
 %Space for Grid Side Converter
-Cbus_bess = 15e-3;%80e-3;        % DC bus capacitance
-Rg_bess = 20e-5;%20e-6;          % Grid side filter? resistance 1
-Lg_bess = 600e-6;%483e-6;        % Grid side filter? inductance 1e-3
+Cbus_bess = 15e-3;        % DC bus capacitance
+%Filter
+Cfilter = 80e-3;
+Rfilter = 20e-3;
+Lfilter = 483e-6;
+
 
 %kp_v = -1000;   
 %ki_v = -300000;
