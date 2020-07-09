@@ -130,6 +130,7 @@ Vv=[0.1:0.1:15];
 %--------------------------------------------------------------------------
 %PARAMETERS OF BESS
 %--------------------------------------------------------------------------
+Vdc_bat_ref= 1300;       % Bus Voltage Battery
 %Space for Grid Side Converter
 Cbus_bess = 15e-3;        % DC bus capacitance
 %Filter
@@ -138,7 +139,3 @@ Rfilter = 20e-3;
 Lfilter = 483e-6;
 
 
-%kp_v = -1000;   
-%ki_v = -300000;
-
-Vdc_bat_ref= 1200; %1200
