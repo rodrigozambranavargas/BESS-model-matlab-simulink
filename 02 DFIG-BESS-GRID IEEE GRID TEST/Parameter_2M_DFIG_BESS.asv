@@ -125,12 +125,14 @@ for k=1:7
          plot(omega_m_deload,Pt_deload)        
     end   
 end
+
 % Lambda and CP optimum
 cp_opt = max(Cp)
 cp_opt_abs = abs(max(Cp));
 posicion=find(Cp==cp_opt);
 lambda_opt = abs(lambda(posicion))
 beta = beta (k)     %Pitch angle
+
 % Wind velocity Vs Wind Power
 cont2=1;
 lambda=[0.1:0.1:14];
@@ -149,6 +151,7 @@ Vv=[0.1:0.1:14];
 %plot(omega_m,Pt), grid on, hold on,
 %figure (6)
 %plot(omega_m_deload,Pt_deload), grid on, hold on,
+
 %--------------------------------------------------------------------------
 
 %--------------------------------------------------------------------------
