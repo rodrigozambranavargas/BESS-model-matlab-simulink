@@ -6,7 +6,7 @@ clc
 %IEEE - DFIM: Chapter 3 
 %--------------------------------------------------------------------------
 f = 60;                     % Stator frequency (Hz)
-n = 1500;                   % Synchronous speed at 50 Hz|(rev/min)
+n = 1800;                   % Synchronous speed at 50 Hz|(rev/min)
 Ps = 2e6;                   % Nominal stator three-phase active power|(MW)
 Vs = 690;                   % Line-to-line nominal stator voltage in rms (V)
 Is = 1760;                  % Each phase nominal stator current in rms (Amp)
@@ -32,7 +32,7 @@ smax = 0.33;                % Maximun slip 0.25
 Fs = 1.8%1.8;               % Stator Flux
 Vbus_ref = 1200;            % Bus Voltage
 %Mechanic 
-J = 90%130;                 % Inertia Kg*m^2
+J = 90%130                  % Inertia Kg*m^2
 D = 0.1%1e-3;               % Damping friction factor N.m.s
 %PI regulators
 sigma = 1- Lm^2/(Ls*Lr); 
@@ -78,6 +78,10 @@ Ts = 1/fsw/f;               % Sample time (sec)
 %--------------------------------------------------------------------------
 %Space for Three blade wind turbine model
 % Beta -> Lambda Vs Cp Graph
+max_rpm_t = 21.6            %Based on DFIG 50Hz relation = 1.2 for 60Hz
+min_rpm_t = 10.8            %Based on DFIG 50Hz relation = 1.2 for 60Hz
+max_rpm_g = 2160            %Based on DFIG 50Hz relation = 1.2 for 60Hz
+min_rpm_g = 1080            %Based on DFIG 50Hz relation = 1.2 for 60Hz
 N = 100;                    %Gearbox Ratio
 Radio = 44;                 %Radio
 ro = 1.225;                 %Air desity kg/m3           
@@ -94,7 +98,7 @@ for k=1:7
     end
     lambda=[0.1:0.1:14];
     %figure (1)
-    plot(lambda,Cp), grid on, hold on,
+    %plot(lambda,Cp), grid on, hold on,
     
     %Rotor Speed Vs Power Graph
     cont3=1;
@@ -119,20 +123,18 @@ for k=1:7
          omega_m_deload (cont3) = (((lambda_opt_deload)*Vv) /Radio)*N/(2*pi/60);        
          cont3=cont3+1;
          %
-         figure (2)
-         plot(omega_m,Pt), grid on, hold on,         
-         plot(omega_m_opt,Pt_opt)
-         plot(omega_m_deload,Pt_deload)        
+         %figure (2)
+         %plot(omega_m,Pt), grid on, hold on,         
+         %plot(omega_m_opt,Pt_opt)
+         %plot(omega_m_deload,Pt_deload)        
     end   
 end
-
 % Lambda and CP optimum
 cp_opt = max(Cp)
 cp_opt_abs = abs(max(Cp));
 posicion=find(Cp==cp_opt);
 lambda_opt = abs(lambda(posicion))
 beta = beta (k)     %Pitch angle
-
 % Wind velocity Vs Wind Power
 cont2=1;
 lambda=[0.1:0.1:14];
@@ -151,7 +153,6 @@ Vv=[0.1:0.1:14];
 %plot(omega_m,Pt), grid on, hold on,
 %figure (6)
 %plot(omega_m_deload,Pt_deload), grid on, hold on,
-
 %--------------------------------------------------------------------------
 
 %--------------------------------------------------------------------------

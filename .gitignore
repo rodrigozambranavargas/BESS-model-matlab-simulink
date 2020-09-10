@@ -7,3 +7,6 @@ DFIG_and_BESS_acc.exp
 DFIG_and_BESS_acc.lib
 DFIG_and_BESS_acc.mexw64
 slprj
+Tests.xlsx
+*.mat
+~$Tests.xlsx
