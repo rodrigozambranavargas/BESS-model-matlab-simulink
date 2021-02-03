@@ -123,10 +123,10 @@ for k=1:7
          omega_m_deload (cont3) = (((lambda_opt_deload)*Vv) /Radio)*N/(2*pi/60);        
          cont3=cont3+1;
          %
-         %figure (2)
-         %plot(omega_m,Pt), grid on, hold on,         
-         %plot(omega_m_opt,Pt_opt)
-         %plot(omega_m_deload,Pt_deload)        
+         figure (2)
+         plot(omega_m,Pt), grid on, hold on,         
+         plot(omega_m_opt,Pt_opt)
+         plot(omega_m_deload,Pt_deload)        
     end   
 end
 % Lambda and CP optimum

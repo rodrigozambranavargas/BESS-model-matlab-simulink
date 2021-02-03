@@ -1,14 +1,18 @@
 %Frequency DFIG
 figure (1)
-plot(f_dfig_test5(:,1),f_dfig_test5(:,2),'r',f_dfig_test6(:,1),f_dfig_test6(:,2),'b',f_dfig_test7(:,1),f_dfig_test7(:,2),'g',f_dfig_test8(:,1),f_dfig_test8(:,2),'r',f_dfig_test9(:,1),f_dfig_test9(:,2),'b',f_dfig_test10(:,1),f_dfig_test10(:,2),'g',f_dfig_test11(:,1),f_dfig_test11(:,2),'r',f_dfig_test12(:,1),f_dfig_test12(:,2),'b',f_dfig_test13(:,1),f_dfig_test13(:,2),'g');
+plot(f_dfig_test5_1(:,1),f_dfig_test5_1(:,2),'r',f_dfig_test5_2(:,1),f_dfig_test5_2(:,2),'b',f_dfig_test5_3(:,1),f_dfig_test5_3(:,2),'g');
+figure (2)
+plot(f_grid_test5_1(:,1),f_grid_test5_1(:,2),'r',f_grid_test5_2(:,1),f_grid_test5_2(:,2),'b',f_grid_test5_3(:,1),f_grid_test5_3(:,2),'g');
+%plot(f_dfig_test17(:,1),f_dfig_test17(:,2),'r',f_dfig_test18(:,1),f_dfig_test18(:,2),'b',f_dfig_test19(:,1),f_dfig_test19(:,2),'g');
+%plot(f_dfig_test5(:,1),f_dfig_test5(:,2),'r',f_dfig_test6(:,1),f_dfig_test6(:,2),'b',f_dfig_test7(:,1),f_dfig_test7(:,2),'g',f_dfig_test8(:,1),f_dfig_test8(:,2),'r',f_dfig_test9(:,1),f_dfig_test9(:,2),'b',f_dfig_test10(:,1),f_dfig_test10(:,2),'g',f_dfig_test11(:,1),f_dfig_test11(:,2),'r',f_dfig_test12(:,1),f_dfig_test12(:,2),'b',f_dfig_test13(:,1),f_dfig_test13(:,2),'g');
 % figure (5)
 % plot(f_dfig_test5(:,1),f_dfig_test5(:,2),'r',f_dfig_test6(:,1),f_dfig_test6(:,2),'b',f_dfig_test7(:,1),f_dfig_test7(:,2),'g');
 % figure (6)
 % plot(f_dfig_test8(:,1),f_dfig_test8(:,2),'r',f_dfig_test9(:,1),f_dfig_test9(:,2),'b',f_dfig_test10(:,1),f_dfig_test10(:,2),'g');
 % figure (7)
 % plot(f_dfig_test11(:,1),f_dfig_test11(:,2),'r',f_dfig_test12(:,1),f_dfig_test12(:,2),'b',f_dfig_test13(:,1),f_dfig_test13(:,2),'g');
-figure (8)
-plot(f_dfig_test14(:,1),f_dfig_test14(:,2),'r',f_dfig_test15(:,1),f_dfig_test15(:,2),'b',f_dfig_test16(:,1),f_dfig_test16(:,2),'g');
+%figure (8)
+%plot(f_dfig_test14(:,1),f_dfig_test14(:,2),'r',f_dfig_test15(:,1),f_dfig_test15(:,2),'b',f_dfig_test16(:,1),f_dfig_test16(:,2),'g');
 
 %Frequency GRID
 %figure (2)
